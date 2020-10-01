@@ -57,7 +57,7 @@ namespace TicTacToe
 
         private void Random_player_Clicked(object sender, EventArgs e)
         {
-            First_Player_manual();
+            First_Player();
             New_game_Clicked();
         }
         BoxView box_clik;
@@ -82,8 +82,7 @@ namespace TicTacToe
             };
         }
 
-
-        public async void First_Player_manual()
+        public async void First_Player()
         {
             string first_player_manual = await DisplayPromptAsync("Who is first?", "Red -1, Blue -2", initialValue: "1", maxLength: 1, keyboard: Keyboard.Numeric);
             if (first_player_manual == "1")
